@@ -15,15 +15,20 @@
 .nav > li > a {
     color: #fff;
 }
+
 .nav > li > a:hover,
 .nav > li > a:focus,
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
     color: #fff;
-    background-color: #347ec8;
+    background-color: #777;
 }
 
 .navbar-brand {
     color: #fff;
+}
+
+.main-container {
+    padding-top: 50px;
 }
