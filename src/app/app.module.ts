@@ -13,6 +13,7 @@ import { PermissionComponent } from './permission/permission.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
     RouterModule.forRoot(routerConfig),
 
     AlertModule,
-    DatepickerModule
+    DatepickerModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

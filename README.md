@@ -24,6 +24,11 @@ API文档：http://valor-software.com/ng2-bootstrap/#/
 
  你可以随意使用此项目，无需通知我，因为我可能很忙没空搭理你。
 
+## 关于我
+
+https://my.oschina.net/mumu/blog
+
+
 # ng2-bootstrap-demo
 This project shows how to use Angular2 with Bootstrap.
 
@@ -48,3 +53,7 @@ API documents:http://valor-software.com/ng2-bootstrap/#/
  MIT
 
  You can use this repo whatever you want,no need to contact me first,I might be too busy to answer you.
+
+## About Me
+
+https://my.oschina.net/mumu/blog
