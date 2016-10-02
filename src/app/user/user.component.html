@@ -1,110 +1,38 @@
 <div class="container">
     <div class="user-container">
         <div class="row">
-            <div class="col-sm-6">
-                <p>
-                    <button type="button" class="btn btn-primary btn-sm" (click)="group.isOpen = !group.isOpen">Toggle last panel
-                    </button>
-                    <button type="button" class="btn btn-primary btn-sm" (click)="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel
-                    </button>
-                </p>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" [(ngModel)]="oneAtATime"> Open only one at a time
-                    </label>
-                </div>
+            <div class="col-sm-3">
                 <accordion [closeOthers]="oneAtATime">
-                    <accordion-group heading="Static Header, initially expanded" [isOpen]="status.isFirstOpen" [isDisabled]="status.isFirstDisabled">
-                        This content is straight in the template.
-                    </accordion-group>
-                    <accordion-group *ngFor="let group of groups" [heading]="group.title">
-                        {{ group?.content }}
-                    </accordion-group>
-                    <accordion-group heading="Dynamic Body Content">
-                        <p>The body of the accordion group grows to fit the contents</p>
-                        <button type="button" class="btn btn-primary btn-sm" (click)="addItem()">Add Item</button>
-                        <div *ngFor="let item of items">{{item}}</div>
-                    </accordion-group>
-                    <accordion-group #group [isOpen]="status.open">
-                        <div accordion-heading>
-                            I can have markup, too!
-                            <i class="pull-right glyphicon" [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
-                        </div>
-                        This is just some content to illustrate fancy headings.
+                    <accordion-group heading="User Type" [isOpen]="status.open">
+                        <p *ngFor="let userType of userTypes">
+                            <a href="javascript:void(0);" (click)=getUserByType(userType.id)>{{userType.name}}</a>
+                        </p>
                     </accordion-group>
                 </accordion>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-9">
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
+                                <th>Index</th>
+                                <th>UserName</th>
+                                <th>NickName</th>
+                                <th>RegTime</th>
+                                <th>LastLoginTime</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
+                            <tr *ngFor="let user of users">
+                                <td>{{user.index}}</td>
+                                <td>{{user.userName}}</td>
+                                <td>{{user.nickName}}</td>
+                                <td>{{user.regTime}}</td>
+                                <td>{{user.lastLoginTime}}</td>
                             </tr>
                         </tbody>
                     </table>
+                    <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
                 </div>
             </div>
         </div>

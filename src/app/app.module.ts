@@ -12,8 +12,10 @@ import { RoleComponent } from './role/role.component';
 import { PermissionComponent } from './permission/permission.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EchartsComponent } from './echarts/echarts.component';
-import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 
     AlertModule,
     DatepickerModule,
-    AccordionModule
+    AccordionModule,
+    PaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
