@@ -17,6 +17,12 @@
 
 https://github.com/valor-software/ng2-bootstrap
 
+API文档：http://valor-software.com/ng2-bootstrap/#/
+
+## 开源许可证
+ MIT
+
+ 你可以随意使用此项目，无需通知我，因为我可能很忙没空搭理你。
 
 # ng2-bootstrap-demo
 This project shows how to use Angular2 with Bootstrap.
@@ -35,3 +41,10 @@ If there are some errors caused by node-gyp,try adding --no-optional after npm i
 
 ## Official Repo of ng2-bootstrap
 https://github.com/valor-software/ng2-bootstrap
+
+API documents:http://valor-software.com/ng2-bootstrap/#/
+
+## License
+ MIT
+
+ You can use this repo whatever you want,no need to contact me first,I might be too busy to answer you.
