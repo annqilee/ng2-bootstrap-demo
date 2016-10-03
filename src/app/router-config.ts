@@ -1,5 +1,6 @@
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
 import { RoleComponent } from './role/role.component';
 import { PermissionComponent } from './permission/permission.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -15,6 +16,9 @@ export const routerConfig=[
 	},{
 		path:'user',
 		component:UserComponent
+	},{
+		path:'user/adduser',
+		component:AddUserComponent
 	},{
 		path:'role',
 		component:RoleComponent
