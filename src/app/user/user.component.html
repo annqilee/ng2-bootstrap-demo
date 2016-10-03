@@ -1,16 +1,24 @@
 <div class="container">
     <div class="user-container">
         <div class="row">
-            <div class="col-sm-3">
-                <accordion [closeOthers]="oneAtATime">
-                    <accordion-group heading="User Type" [isOpen]="status.open">
-                        <p *ngFor="let userType of userTypes">
-                            <a href="javascript:void(0);" (click)=getUserByType(userType.id)>{{userType.name}}</a>
-                        </p>
-                    </accordion-group>
-                </accordion>
+            <div class="col-sm-12">
+                <div class="user-toolbar-container">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input #input class="form-control" placeholder="Search" (change)="searchUser(input)">
+                                <div class="input-group-addon btn btn-primary active" (click)="resetSearch(input)">
+                                    <i class="fa fa-ban" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add User</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-sm-9">
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
@@ -20,6 +28,7 @@
                                 <th>NickName</th>
                                 <th>RegTime</th>
                                 <th>LastLoginTime</th>
+                                <th>Operation</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,10 +38,14 @@
                                 <td>{{user.nickName}}</td>
                                 <td>{{user.regTime}}</td>
                                 <td>{{user.lastLoginTime}}</td>
+                                <td>
+                                    <a href="javascript:void(0);" (click)="delUser(user.userId)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                    <a href="javascript:void(0);" (click)="userDetail(user.userId)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                    <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
+                    <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)"></pagination>
                 </div>
             </div>
         </div>
