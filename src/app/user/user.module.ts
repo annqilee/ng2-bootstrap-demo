@@ -5,6 +5,7 @@ import { UserComponent } from '../user/user.component';
 import { AddUserComponent } from '../user/add-user/add-user.component';
 
 import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule } from 'ng2-bootstrap/components/alert';
 import userRoutes from './user.routes.ts';
 
 @NgModule({
@@ -15,6 +16,7 @@ import userRoutes from './user.routes.ts';
   imports: [
 	CommonModule,
     PaginationModule,
+    AlertModule,
     userRoutes
   ],
   exports:[
