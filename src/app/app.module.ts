@@ -13,9 +13,7 @@ import { RoleComponent } from './role/role.component';
 import { PermissionComponent } from './permission/permission.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EchartsComponent } from './echarts/echarts.component';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
@@ -35,9 +33,6 @@ import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
     HttpModule,
     RouterModule.forRoot(routerConfig),
 
-    AlertModule,
-    DatepickerModule,
-    AccordionModule,
     PaginationModule
   ],
   providers: [],

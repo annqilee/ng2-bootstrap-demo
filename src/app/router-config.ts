@@ -6,33 +6,42 @@ import { PermissionComponent } from './permission/permission.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EchartsComponent } from './echarts/echarts.component';
 
-export const routerConfig=[
-	{
-		path:'',
-		component:HomeComponent
-	},{
-		path:'home',
-		component:HomeComponent
-	},{
-		path:'user',
-		component:UserComponent
-	},{
-		path:'user/adduser',
-		component:AddUserComponent
-	},{
-		path:'role',
-		component:RoleComponent
-	},{
-		path:'permission',
-		component:PermissionComponent
-	},{
-		path:'settings',
-		component:SettingsComponent
-	},{
-		path:'echarts',
-		component:EchartsComponent
-	},{
-		path:'**',//fallback router must in the last
-		component:HomeComponent
-	}
-];
+export const routerConfig=[{
+	path:'',
+	children:[
+		{
+			path:'',
+			component:HomeComponent
+		},{
+			path:'home',
+			component:HomeComponent
+		},{
+			path:'user',
+			children:[
+				{
+					path:'',
+					component:UserComponent
+				},
+				{
+					path:'adduser',
+					component:AddUserComponent
+				}
+			]
+		},{
+			path:'role',
+			component:RoleComponent
+		},{
+			path:'permission',
+			component:PermissionComponent
+		},{
+			path:'settings',
+			component:SettingsComponent
+		},{
+			path:'echarts',
+			component:EchartsComponent
+		},{
+			path:'**',//fallback router must in the last
+			component:HomeComponent
+		}
+	]
+}];
