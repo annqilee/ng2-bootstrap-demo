@@ -26,18 +26,14 @@
                                 <th>Index</th>
                                 <th>UserName</th>
                                 <th>NickName</th>
-                                <th>RegTime</th>
-                                <th>LastLoginTime</th>
                                 <th>Operation</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let user of users">
-                                <td>{{user.index}}</td>
+                            <tr *ngFor="let user of users;let idx = index">
+                                <td>{{idx+1}}</td>
                                 <td>{{user.userName}}</td>
                                 <td>{{user.nickName}}</td>
-                                <td>{{user.regTime}}</td>
-                                <td>{{user.lastLoginTime}}</td>
                                 <td>
                                     <a href="javascript:void(0);" (click)="delUser(user.userId)"><i class="fa fa-times" aria-hidden="true"></i></a>
                                     <a href="javascript:void(0);" (click)="userDetail(user.userId)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
