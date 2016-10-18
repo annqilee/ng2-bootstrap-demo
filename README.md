@@ -13,6 +13,10 @@
 
 如果有有node-gyp的报错，可以在npm install的后面加上参数--no-optional
 
+如果你想要生成模块之间的依赖关系图，请使用angular2-dependencies-graph，这是一个第三方的node模块，路径在这里https://github.com/manekinekko/angular2-dependencies-graph
+
+当前的模块依赖关系图我已经生成在src/documentation目录下。
+
 ## ng2-bootstrap官方的仓库
 
 https://github.com/valor-software/ng2-bootstrap
@@ -43,6 +47,10 @@ Navigate your browser to http://localhost:4200/
 Note:If there are some errors when you use npm install,perhaps some npm modules are blocked by GFW(f**k GFW!),please set the npm proxy for yourself,example:npm config set proxy=http://127.0.0.1:1080
 
 If there are some errors caused by node-gyp,try adding --no-optional after npm install.
+
+You can use angular2-dependencies-graph to generate dependencies of modules in this project,angular2-dependencies-graph is a third-party node module,its repo URL is here:https://github.com/manekinekko/angular2-dependencies-graph
+
+Dependencies of current moduels is generated in src/documentation.
 
 ## Official Repo of ng2-bootstrap
 https://github.com/valor-software/ng2-bootstrap
