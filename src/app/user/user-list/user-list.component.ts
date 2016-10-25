@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { UserListService } from '../service/user-list.service';
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  styleUrls: ['./user-list.component.scss'],
+  providers: [UserListService]
 })
 export class UserListComponent implements OnInit {
 	public totalItems:number = 64;
@@ -18,10 +20,8 @@ export class UserListComponent implements OnInit {
 	public teamId: any;
   	private paramsSub: any;
 
-	constructor(private activatedRoute: ActivatedRoute) {
-		//Get test data from localStorage,data was defined in app.component.ts
-		this.users=JSON.parse(window.localStorage.getItem("users"));
-		console.log(this.users);
+	constructor(private activatedRoute: ActivatedRoute,private userListService: UserListService) {
+		this.users=this.userListService.getUserList();
 	}
 
 	ngOnInit() {
@@ -67,7 +67,6 @@ export class UserListComponent implements OnInit {
       }
       if(resultIndex!=-1){
         this.users.splice(resultIndex,1);
-        window.localStorage.setItem("users",JSON.stringify(this.users));
       }
     }
 
