@@ -29,6 +29,6 @@ import userRoutes from './user.routes.ts';
   exports:[
   	UserComponent
   ],
-  providers: []
+  providers: []//providers registed here can be used in the whole application
 })
 export default class UserModule { }

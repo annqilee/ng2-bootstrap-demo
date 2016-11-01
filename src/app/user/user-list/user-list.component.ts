@@ -22,6 +22,22 @@ export class UserListComponent implements OnInit {
 
 	constructor(private activatedRoute: ActivatedRoute,private userListService: UserListService) {
 		this.users=this.userListService.getUserList();
+		//There are 5 Observable properties in ActivatedRoute.
+		activatedRoute.url.subscribe(url=>{
+			console.log("url",url);
+		});
+		activatedRoute.params.subscribe(params=>{
+			console.log("params",params);
+		});
+		activatedRoute.data.subscribe(data=>{
+			console.log("data",data);
+		});
+		activatedRoute.queryParams.subscribe(queryParams=>{
+			console.log("queryParams",queryParams);
+		});
+		activatedRoute.fragment.subscribe(fragment=>{
+			console.log("fragment",fragment);
+		});
 	}
 
 	ngOnInit() {
