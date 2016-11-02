@@ -11,7 +11,16 @@
 
 注意：如果在npm install的过程中有报错，可能是某些包被墙掉(f**k GFW)了，请自己设置翻墙代理之后再运行npm install，设置方式示例：npm config set proxy=http://127.0.0.1:1080
 
-如果有有node-gyp的报错，可以在npm install的后面加上参数--no-optional
+如果有node-gyp的报错，可以在npm install的后面加上参数--no-optional
+
+如果有node-sass的报错，尝试一下翻墙，再次f**k GFW
+
+【特别注意】
+
+如果你是在Windows下安装，启动cmd的时候要用管理员身份启动。
+
+如果你是在MAC或者Linx下安装，请尝试用sudo执行安装命令，否则某些目录可能权限不够。
+
 
 如果你想要生成模块之间的依赖关系图，请使用angular2-dependencies-graph，这是一个第三方的node模块，路径在这里https://github.com/manekinekko/angular2-dependencies-graph
 
@@ -47,6 +56,14 @@ Navigate your browser to http://localhost:4200/
 Note:If there are some errors when you use npm install,perhaps some npm modules are blocked by GFW(f**k GFW!),please set the npm proxy for yourself,example:npm config set proxy=http://127.0.0.1:1080
 
 If there are some errors caused by node-gyp,try adding --no-optional after npm install.
+
+If there are some errors caused by node-sass, try VPN through GFW, f**k GFW again.
+
+[Note]
+
+If you are using Windows, please run cmd as an administrator.
+
+If you are using MAC or Linux, try adding "sudo" before each command above, otherwise some directories may not have enough permission.
 
 You can use angular2-dependencies-graph to generate dependencies of modules in this project,angular2-dependencies-graph is a third-party node module,its repo URL is here:https://github.com/manekinekko/angular2-dependencies-graph
 
