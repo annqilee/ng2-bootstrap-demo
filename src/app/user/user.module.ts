@@ -10,7 +10,7 @@ import { AddUserComponent } from '../user/add-user/add-user.component';
 import { UserListComponent } from '../user/user-list/user-list.component';
 import { UserTypeComponent } from '../user/user-type/user-type.component';
 
-import userRoutes from './user.routes.ts';
+import userRoutes from './user.routes';
 
 @NgModule({
   declarations: [

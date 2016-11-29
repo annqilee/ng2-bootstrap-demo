@@ -32,7 +32,7 @@ export class AddUserComponent implements OnInit {
         let routerInstance=this.router;
         setTimeout(function(){
           routerInstance.navigateByUrl("/user");
-        },1000);
+        },300);
       }else{
   			this.alerts.push({msg: 'Please check the input...', type: 'danger', dismissOnTimeout:1000});
   		}

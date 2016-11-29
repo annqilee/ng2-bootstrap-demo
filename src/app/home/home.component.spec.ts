@@ -8,4 +8,5 @@ describe('Component: Home', () => {
     let component = new HomeComponent();
     expect(component).toBeTruthy();
   });
+  //...
 });

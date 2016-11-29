@@ -9,18 +9,17 @@
 
 打开你的浏览器，输入http://localhost:4200/
 
-注意：如果在npm install的过程中有报错，可能是某些包被墙掉(f**k GFW)了，请自己设置翻墙代理之后再运行npm install，设置方式示例：npm config set proxy=http://127.0.0.1:1080
+注意：如果在npm install的过程中有报错，可能是某些包被Qiang掉了，请自己设置翻Qiang代理之后再运行npm install，设置方式示例：npm config set proxy=http://127.0.0.1:1080
 
 如果有node-gyp的报错，可以在npm install的后面加上参数--no-optional
 
-如果有node-sass的报错，尝试一下翻墙，再次f**k GFW
+如果有node-sass的报错，尝试一下翻Qiang.
 
 【特别注意】
 
 如果你是在Windows下安装，启动cmd的时候要用管理员身份启动。
 
 如果你是在MAC或者Linx下安装，请尝试用sudo执行安装命令，否则某些目录可能权限不够。
-
 
 如果你想要生成模块之间的依赖关系图，请使用angular2-dependencies-graph，这是一个第三方的node模块，路径在这里https://github.com/manekinekko/angular2-dependencies-graph
 
@@ -57,7 +56,7 @@ Note:If there are some errors when you use npm install,perhaps some npm modules 
 
 If there are some errors caused by node-gyp,try adding --no-optional after npm install.
 
-If there are some errors caused by node-sass, try VPN through GFW, f**k GFW again.
+If there are some errors caused by node-sass, try VPN through GFW.
 
 [Note]
 
