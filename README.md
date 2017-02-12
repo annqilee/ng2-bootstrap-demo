@@ -1,6 +1,10 @@
 # ng2-bootstrap-demo
 此项目用来示范Angular2结合Bootstrap的用法。
 
+## 注意
+
+我做了一个更好，更全面的例子---NiceFish放在开源中国的码云上面，我还给它配上了全面的视频教程，请点： http://git.oschina.net/mumu-osc/NiceFish
+
 ## 用法
 
 	npm install
